@@ -1,0 +1,355 @@
+/* Yleiset tyylit */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #da3c66;
+  color: #4a4a4a;
+  display: flex;
+  flex-direction: column; /* Asetellaan sisältö pystysuunnassa */
+  min-height: 100vh; /* Varmistetaan, että korkeus täyttää koko näkymän */
+}
+
+/* Etusivun taustakuva */
+#etusivu {
+  background-image: url(kuvat/ai-generated-7718952_1920.jpg); /* Taustakuva */
+  background-size: cover; /* Peittää koko alueen */
+  background-position: center; /* Keskittää kuvan */
+  background-repeat: no-repeat; /* Ei toista kuvaa */
+  flex: 1; /* Täyttää kaiken tilan footerin yläpuolella */
+  display: flex; /* Flexbox asettelu */
+  flex-direction: column; /* Asetellaan sisältö pystysuunnassa */
+  justify-content: center; /* Keskittää pystysuunnassa */
+  align-items: center; /* Keskittää vaakasuunnassa */
+  position: relative; /* Suhteellinen sijainti */
+}
+
+/* Hampurilaisvalikon perusasetukset */
+.hamburger-menu {
+  display: none; /* Piilotetaan oletuksena */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 20; /* Varmistaa, että valikko on muiden päällä */
+}
+
+.hamburger-menu span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: aliceblue;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Navigointilinkit piilotettuna mobiilissa */
+.nav-links {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 1rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+ /*Perus navigointi*/
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  z-index: 100;
+}
+
+nav a {
+  text-decoration: none; /* Poistaa oletusalleviivauksen */
+  color: aliceblue;
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative; /* Mahdollistaa pseudo-elementin käytön */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Lisää hienovaraisen varjon */ 
+}
+
+nav a::after {
+  content: ""; /* Luo tyhjän pseudo-elementin */
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Etäisyys tekstin alapuolelta */
+  width: 0;
+  height: 2px; /* Viivan korkeus */
+  background-color: #da3c66; /* Viivan väri */
+  transition: width 0.3s ease; /* Animaatio */
+}
+
+nav a:hover::after {
+  width: 100%; /* Laajentaa viivan koko linkin leveydelle hover-tilassa */
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Lisää vaalea taustaväri hover-tilassa */
+  border-radius: 5px; /* Pyöristää taustavärin kulmat */
+  padding: 5px 10px; /* Lisää tilaa tekstin ympärille hover-tilassa */
+}
+
+.logo {
+  position: absolute; /* Kiinnittää logon vasempaan yläkulmaan */
+  top: 20px; /* Etäisyys yläreunasta */
+  left: 20px; /* Etäisyys vasemmasta reunasta */
+  z-index: 10; /* Varmistaa, että logo näkyy muiden elementtien päällä */
+}
+
+.logo img {
+  width: 150px; /* Logon koko */
+  height: auto;
+}
+
+.tervetuloteksti {
+  text-align: center; /* Keskittää tekstin */
+  max-width: 800px; /* Rajoittaa tekstin leveyden */
+  padding: 20px; /* Lisää tilaa sisällön ympärille */
+  background-color: rgba(255, 255, 255, 0.8); /* Vaalea läpinäkyvä taustaväri */
+  border-radius: 10px; /* Pyöristetyt kulmat */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hieno varjo */
+  box-sizing: border-box; /* Sisällyttää reunat laatikon kokoon */
+  margin: 100px auto 30px; /* Keskittää tekstilaatikon ja jättää tilaa ylhäällä ja alhaalla */
+}
+
+.tervetuloteksti h1 {
+  font-size: 2rem; /* Otsikon koko */
+  color: #333333; /* Tumma fontin väri */
+  margin-bottom: 10px; /* Väli otsikon ja tekstin välillä */
+  text-align: center;
+  
+}
+
+.tervetuloteksti p {
+  font-size: 1rem; /* Tekstin koko */
+  line-height: 1.6; /* Lisää riviväliä */
+  color: #333333; /* Tumma fontin väri */
+  margin-top: 0; /* Poistaa ylimääräisen marginaalin ylhäältä */
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #da3c66; /* Painikkeen taustaväri */
+  color: #ffffff; /* Tekstin väri */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Lisää animaatio varjolle */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Lisää varjo painikkeeseen */
+}
+
+.cta-button:hover {
+  background-color: #b02a4e; /* Hover-efekti */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Syvempi varjo hover-tilassa */
+}
+
+.corner-image {
+  position: relative; /* Kiinnitetään suhteessa tekstilaatikkoon */
+  margin: 20px auto; /* Keskitetään kuva */
+  display: flex;
+  justify-content: center;
+}
+
+
+.corner-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Pyöreä muoto */
+  margin-bottom: 30px; /* Lisää tilaa kuvan alapuolelle */
+  border: 3px solid #ffffff; /* Lisää valkoinen reunus */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Lisää varjo kuvan ympärille */
+  object-fit: cover; /* Varmistaa, että kuva täyttää ympyrän */
+  margin-top: -30px; /* Siirtää alemman kuvan tekstilaatikon päälle */
+  z-index: 5; /* Asettaa alemman kuvan tekstilaatikon päälle */
+}
+
+/* Footer pysyy alareunassa ja näkyy oikein */
+footer {
+    position: absolute; /* Vaihdetaan position staticista relativeksi */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-top: 2px solid #da3c66; /* Yläreunaan pinkki viiva */
+    color: #4a4a4a;
+    font-size: 1rem;
+}
+
+/* Responsiiviset tyylit */
+
+/* Piilotetaan navigointilinkit mobiilissa */
+@media (max-width: 768px) {
+
+/* Logo pienemmäksi ja pysyy vasemmassa yläkulmassa */
+.logo img {
+  width: 100px; /* Pienempi logo */
+}
+
+  .hamburger-menu {
+    display: flex; /* Näytetään hampurilaisvalikko */
+  }
+
+  .nav-links {
+    display: none; /* Piilotetaan navigointilinkit oletuksena */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+  }
+
+  .nav-links.active {
+    display: flex; /* Näytetään linkit, kun valikko on aktiivinen */
+  }
+
+  .nav-links a {
+    color: white;
+    padding: 10px 0;
+  }
+
+  /* Tekstilaatikko mukautuu */
+  .tervetuloteksti {
+    margin: 120px auto 30px; /* Jätetään tilaa navigoinnille yläpuolelle */
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .tervetuloteksti h1 {
+    font-size: 1.5rem; /* Pienempi fonttikoko tableteille ja pienille näytöille */
+    margin-bottom: 8px; /* Väli otsikon ja tekstin välillä */
+  }
+
+  .tervetuloteksti p {
+    font-size: 0.9rem; /* Pienempi fonttikoko tableteille ja pienille näytöille */
+    line-height: 1.3; /* Lisää riviväliä */
+  }
+
+  /* Pallokuva siirtyy tekstilaatikon alapuolelle */
+  .corner-image {
+    position: static; /* Poistetaan kiinteä sijainti */
+    margin: 20px auto 0; /* Keskitetään kuva tekstilaatikon alapuolelle */
+    display: flex;
+    justify-content: center;
+  }
+
+  footer {
+    font-size: 0.9rem; /* Pienempi fonttikoko tableteille */
+  }
+}
+  
+
+@media (max-width: 480px) {
+
+  nav {
+    padding: 10px;
+  }
+
+  nav .nav-links.active {
+    width: 80%;
+    right: 10px;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+
+  .tervetuloteksti h2 {
+    font-size: 0.8rem; /* Pienempi fonttikoko puhelimille */
+  }
+
+  .tervetuloteksti p {
+    font-size: 0.8rem; /* Pienennetään tekstin kokoa mobiililaitteilla */
+    line-height: 1.2; /* Pienennetään riviväliä */
+  }
+  
+  .corner-image {
+    position: static; /* Kiinnitetään kuva suhteessa näkymään */
+    bottom: 80px; /* Sijoitetaan kuva lähemmäksi footeria */
+    right: 2px; /* Sijoitetaan kuva oikeaan reunaan */
+   
+  }
+  .corner-image img {
+    width: 60px;
+    height: 60px;
+    bottom: 100px; /* Sijoitetaan kuva lähemmäksi footeria */
+    right: 2px; /* Sijoitetaan kuva oikeaan reunaan */
+    margin-bottom: 55px; /* Lisää vielä enemmän tilaa mobiililaitteilla */
+  }
+
+  footer {
+    font-size: 0.8rem; /* Pienempi fonttikoko puhelimille */
+  }
+}
+
+/* Hinnasto-osio */
+#hinnasto {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+#hinnasto h1 {
+  font-size: 2rem;
+  color: #da3c66;
+  margin-bottom: 20px;
+}
+
+#hinnasto p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.price-table th, .price-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.price-table th {
+  background-color: #da3c66;
+  color: #fff;
+  font-weight: bold;
+}
+
+.price-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.price-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.price-table td {
+  color: #333;
+}

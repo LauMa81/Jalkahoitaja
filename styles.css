@@ -7,6 +7,8 @@ body, html {
   background-color: #f7e7cb;
   background-image: url(kuvat/bokeh-2072271.jpg); /* Taustakuva */;
   color: #4a4a4a;
+  background-size: cover; /* Skaalaa taustakuva */
+  background-position: center; /* Keskittää taustakuvan */
   display: flex;
   flex-direction: column; /* Asetellaan sisältö pystysuunnassa */
 }
@@ -114,14 +116,13 @@ nav a:hover {
 }
 
 .tervetuloteksti {
-  text-align: center; /* Keskittää tekstin */
-  max-width: 800px; /* Rajoittaa tekstin leveyden */
-  background-color: rgba(255, 255, 255, 0.8); /* Vaalea läpinäkyvä taustaväri */
-  border-radius: 10px; /* Pyöristetyt kulmat */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hieno varjo */
-  box-sizing: border-box; /* Sisällyttää reunat laatikon kokoon */
-  margin: 20px auto; /* Keskittää tekstilaatikon ja jättää tilaa ylhäällä ja alhaalla */
-  padding: 20px; /* Lisää tilaa tekstin ympärille */
+  text-align: center;
+  padding: 20px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 100px auto;
+  max-width: 800px;
 }
 
 .tervetuloteksti h1 {
@@ -140,7 +141,7 @@ nav a:hover {
 
 .tervetuloteksti p {
   font-size: 1rem; /* Tekstin koko */
-  line-height: 1.6; /* Lisää riviväliä */
+  line-height: 1.5; /* Riviväli */
   color: #333333; /* Tumma fontin väri */
   margin-top: 0; /* Poistaa ylimääräisen marginaalin ylhäältä */
 }
@@ -297,7 +298,7 @@ footer {
 }
 
 #maksutavat h1, #maksutavat h2 {
-  font-size: 1.6rem; /* Pienennetään otsikoiden kokoa */
+  font-size: 2rem; /* Pienennetään otsikoiden kokoa */
   color: #c33575;
   margin-bottom: 10px;
 }
@@ -339,7 +340,7 @@ footer {
 }
 
 #palvelut h1, #palvelut h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #c33575;
   margin-bottom: 20px;
 }

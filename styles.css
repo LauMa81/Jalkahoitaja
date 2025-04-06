@@ -15,9 +15,6 @@ body, html {
 
 main {
   flex: 1; /* Ottaa kaiken jäljellä olevan tilan */
-  margin: 0; /* Poistaa ylimääräiset marginaalit */
-  padding: 0; /* Poistaa ylimääräiset paddingit */
-
 }
 
 /* Hampurilaisvalikon perusasetukset */
@@ -184,7 +181,7 @@ nav a:hover {
 /* Footer pysyy alalaidassa */
 footer {
   text-align: center;
-  padding: 20px 0; /* Lisää tilaa ylhäällä ja alhaalla */
+ padding: 20px 0;
   background-color: #f4f4f4;
   border-top: 2px solid #c33575; /* Lisää pinkki yläreuna */
   color: #4a4a4a;

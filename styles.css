@@ -482,9 +482,13 @@ footer {
   width: 80px; /* Pienempi logo */
 }
 
-  .hamburger-menu {
-    display: flex; /* Näytetään hampurilaisvalikko */
-  }
+.hamburger-menu {
+  display: flex; /* Näytetään hampurilaisvalikko */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin: 10px; /* Lisää tilaa hampurilaisvalikon ympärille */
+}
 
   .nav-links {
     display: none; /* Piilotetaan navigointilinkit oletuksena */
@@ -557,6 +561,14 @@ footer {
   
 
 @media (max-width: 480px) {
+
+  .hamburger-menu {
+    width: 25px; /* Pienennetään hampurilaisvalikon kokoa */
+    height: 20px;
+    margin: 10px; /* Lisää tilaa hampurilaisvalikon ympärille */
+  }
+
+
 
   nav {
     padding: 10px;

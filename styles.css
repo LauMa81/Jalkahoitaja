@@ -3,7 +3,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #da3c66;
+  background-color: #f7e7cb;
+  background-image: url(kuvat/bokeh-2072271.jpg); /* Taustakuva */;
   color: #4a4a4a;
   display: flex;
   flex-direction: column; /* Asetellaan sisältö pystysuunnassa */
@@ -90,7 +91,7 @@ nav a::after {
   bottom: -5px; /* Etäisyys tekstin alapuolelta */
   width: 0;
   height: 2px; /* Viivan korkeus */
-  background-color: #da3c66; /* Viivan väri */
+  background-color: #c33575; /* Viivan väri */
   transition: width 0.3s ease; /* Animaatio */
 }
 
@@ -114,17 +115,20 @@ nav a:hover {
 .logo img {
   width: 150px; /* Logon koko */
   height: auto;
+  border-radius: 50%; /* Muuttaa logon ympyräksi */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Lisää varjo ympyrän ympärille */
+  object-fit: cover; /* Varmistaa, että kuva täyttää ympyrän ilman venymistä */
 }
 
 .tervetuloteksti {
   text-align: center; /* Keskittää tekstin */
   max-width: 800px; /* Rajoittaa tekstin leveyden */
-  padding: 20px; /* Lisää tilaa sisällön ympärille */
+  padding: 10px; /* Lisää tilaa sisällön ympärille */
   background-color: rgba(255, 255, 255, 0.8); /* Vaalea läpinäkyvä taustaväri */
   border-radius: 10px; /* Pyöristetyt kulmat */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hieno varjo */
   box-sizing: border-box; /* Sisällyttää reunat laatikon kokoon */
-  margin: 100px auto 30px; /* Keskittää tekstilaatikon ja jättää tilaa ylhäällä ja alhaalla */
+  margin: 50px auto 30px; /* Keskittää tekstilaatikon ja jättää tilaa ylhäällä ja alhaalla */
 }
 
 .tervetuloteksti h1 {
@@ -144,7 +148,7 @@ nav a:hover {
 
 .cta-button {
   display: inline-block;
-  background-color: #da3c66; /* Painikkeen taustaväri */
+  background-color: #c33575; /* Painikkeen taustaväri */
   color: #ffffff; /* Tekstin väri */
   padding: 10px 20px;
   border-radius: 5px;
@@ -155,7 +159,7 @@ nav a:hover {
 }
 
 .cta-button:hover {
-  background-color: #b02a4e; /* Hover-efekti */
+  background-color: #c33575; /* Hover-efekti */
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Syvempi varjo hover-tilassa */
 }
 
@@ -171,12 +175,9 @@ nav a:hover {
   width: 100px;
   height: 100px;
   border-radius: 50%; /* Pyöreä muoto */
-  margin-bottom: 30px; /* Lisää tilaa kuvan alapuolelle */
-  border: 3px solid #ffffff; /* Lisää valkoinen reunus */
+  border: 3px solid #da3c66; /* Lisää pinkki reunus *
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Lisää varjo kuvan ympärille */
   object-fit: cover; /* Varmistaa, että kuva täyttää ympyrän */
-  margin-top: -30px; /* Siirtää alemman kuvan tekstilaatikon päälle */
-  z-index: 5; /* Asettaa alemman kuvan tekstilaatikon päälle */
 }
 
 /* Footer pysyy alareunassa ja näkyy oikein */
@@ -190,6 +191,311 @@ footer {
     border-top: 2px solid #da3c66; /* Yläreunaan pinkki viiva */
     color: #4a4a4a;
     font-size: 1rem;
+}
+
+/* Tietoa minusta -osio */
+#tietoa-minusta {
+  text-align: center;
+  padding: 20px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 100px auto;
+  max-width: 800px;
+}
+
+#tietoa-minusta h1 {
+  font-size: 2rem;
+  color: #da3c66;
+  margin-bottom: 20px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 300px;
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.1); /* Suurentaa kuvaa hover-tilassa */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Syvempi varjo hover-tilassa */
+}
+
+.about-text {
+  flex: 2;
+  text-align: left;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Yhteystiedot-osio */
+#yhteystiedot {
+  text-align: center;
+  padding: 20px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 100px auto;
+  max-width: 800px;
+}
+
+#yhteystiedot h1 {
+  font-size: 2rem;
+  color: #da3c66;
+  margin-bottom: 20px;
+}
+
+#yhteystiedot p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: #da3c66;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Soita nyt -painike */
+.cta-button {
+  display: inline-block;
+  background-color: #da3c66;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  background-color: #b02a4e;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Maksutavat-osio */
+#maksutavat {
+  text-align: center;
+  padding: 20px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 100px auto;
+  max-width: 800px;
+}
+
+#maksutavat h1, #maksutavat h2 {
+  font-size: 1.6rem; /* Pienennetään otsikoiden kokoa */
+  color: #da3c66;
+  margin-bottom: 10px;
+}
+
+#maksutavat p {
+  font-size: 0.9rem; /* Pienennetään tekstin kokoa */
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.4; /* Tiivistetään riviväliä */
+}
+
+.payment-methods {
+  list-style-type: disc;
+  margin: 10px auto;
+  padding-left: 15px;
+  text-align: left;
+  max-width: 500px; /* Pienennetään listan maksimileveyttä */
+}
+
+.payment-methods li {
+  font-size: 0.9rem; /* Pienennetään listan tekstin kokoa */
+  color: #333;
+  margin-bottom: 5px; /* Tiivistetään listan välejä */
+}
+
+/* Palvelut-osio */
+#palvelut {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+#palvelut h1, #palvelut h2 {
+  font-size: 1.8rem;
+  color: #da3c66;
+  margin-bottom: 20px;
+}
+
+#palvelut p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.service-list, .product-list {
+  list-style-type: disc;
+  margin: 20px auto;
+  padding-left: 20px;
+  text-align: left;
+  max-width: 600px;
+}
+
+.service-list li, .product-list li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Palvelut-osio */
+#palvelut {
+  text-align: center;
+  padding: 20px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 100px auto;
+  max-width: 800px;
+}
+
+#palvelut h1, #palvelut h2 {
+  font-size: 1.8rem;
+  color: #da3c66;
+  margin-bottom: 20px;
+}
+
+#palvelut p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Flexbox-asettelu listauksille */
+.lists-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  margin: 20px 50px 20px 50px;
+}
+
+.service-list-container, .product-list-container {
+  flex: 1;
+  text-align: left;
+}
+
+.service-list, .product-list {
+  list-style-type: disc;
+  margin: 10px auto;
+  padding-left: 20px;
+}
+
+.service-list li, .product-list li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Hinnasto-painike */
+.cta-button {
+  display: inline-block;
+  background-color: #da3c66;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  background-color: #b02a4e;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Hinnasto-osio */
+#hinnasto {
+  text-align: center;
+  padding: 20px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 100px auto;
+  max-width: 800px;
+}
+
+#hinnasto h1 {
+  font-size: 2rem;
+  color: #da3c66;
+  margin-bottom: 20px;
+}
+
+#hinnasto p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.price-table th, .price-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.price-table th {
+  background-color: #da3c66;
+  color: #fff;
+  font-weight: bold;
+}
+
+.price-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.price-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.price-table td {
+  color: #333;
 }
 
 /* Responsiiviset tyylit */
@@ -247,7 +553,7 @@ footer {
   /* Pallokuva siirtyy tekstilaatikon alapuolelle */
   .corner-image {
     position: static; /* Poistetaan kiinteä sijainti */
-    margin: 20px auto 0; /* Keskitetään kuva tekstilaatikon alapuolelle */
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
   }
@@ -273,8 +579,15 @@ footer {
     width: 80px;
   }
 
+  .tervetuloteksti {
+    margin: 120px auto 30px; /* Jätetään tilaa navigoinnille yläpuolelle */
+    padding: 15px;
+    max-width: 90%;
+  }
+
   .tervetuloteksti h2 {
     font-size: 0.8rem; /* Pienempi fonttikoko puhelimille */
+    margin-top: 10px;
   }
 
   .tervetuloteksti p {
@@ -284,7 +597,7 @@ footer {
   
   .corner-image {
     position: static; /* Kiinnitetään kuva suhteessa näkymään */
-    bottom: 80px; /* Sijoitetaan kuva lähemmäksi footeria */
+   
     right: 2px; /* Sijoitetaan kuva oikeaan reunaan */
    
   }
@@ -292,8 +605,7 @@ footer {
     width: 60px;
     height: 60px;
     bottom: 100px; /* Sijoitetaan kuva lähemmäksi footeria */
-    right: 2px; /* Sijoitetaan kuva oikeaan reunaan */
-    margin-bottom: 55px; /* Lisää vielä enemmän tilaa mobiililaitteilla */
+    margin-bottom: 10px; /* Lisää vielä enemmän tilaa mobiililaitteilla */
   }
 
   footer {
@@ -301,55 +613,11 @@ footer {
   }
 }
 
-/* Hinnasto-osio */
-#hinnasto {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 50px auto;
-  max-width: 800px;
+/* Responsiivisuus pienemmille näytöille */
+@media (max-width: 768px) {
+  .lists-container {
+    flex-direction: column; /* Asetetaan listat päällekkäin pienillä näytöillä */
+    gap: 10px;
+  }
 }
 
-#hinnasto h1 {
-  font-size: 2rem;
-  color: #da3c66;
-  margin-bottom: 20px;
-}
-
-#hinnasto p {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 30px;
-}
-
-.price-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 0 auto;
-}
-
-.price-table th, .price-table td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-}
-
-.price-table th {
-  background-color: #da3c66;
-  color: #fff;
-  font-weight: bold;
-}
-
-.price-table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.price-table tr:hover {
-  background-color: #f1f1f1;
-}
-
-.price-table td {
-  color: #333;
-}

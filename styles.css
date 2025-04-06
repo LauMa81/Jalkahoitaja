@@ -190,7 +190,6 @@ footer {
   color: #4a4a4a;
   font-size: 0.8rem;
   width: 100%; /* Täyttää koko leveyden */
-  position: relative; /* Kiinnitetään suhteessa muuhun sisältöön */
 }
 
 /* Tietoa minusta -osio */

@@ -52,7 +52,7 @@ main {
 .nav-links a {
   text-decoration: none;
   color: aliceblue;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
@@ -70,7 +70,7 @@ nav {
 nav a {
   text-decoration: none; /* Poistaa oletusalleviivauksen */
   color: aliceblue;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
   position: relative; /* Mahdollistaa pseudo-elementin käytön */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Lisää hienovaraisen varjon */ 
@@ -113,20 +113,19 @@ nav a:hover {
 }
 
 .tervetuloteksti {
-  text-align: center;
-  padding: 20px 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 100px auto;
-  max-width: 800px;
+  text-align: center; /* Keskittää tekstin */
+  padding: 20px; /* Lisää sisäistä tilaa */
+  background-color: rgba(255, 255, 255, 0.8); /* Vaalea taustaväri */
+  border-radius: 10px; /* Pyöristetyt kulmat */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hieno varjo */
+  margin: 100px auto; /* Keskittää laatikon vaakasuunnassa */
+  max-width: 800px; /* Rajoittaa laatikon leveyden */
 }
 
 .tervetuloteksti h1 {
-  font-size: 2rem; /* Otsikon koko */
-  color: #333333; /* Tumma fontin väri */
-  text-align: center;
-  margin: 10px 0; /* Poistaa ylimääräisen marginaalin ylhäältä ja alhaalta */
+  font-size: 2rem; /* Suurempi otsikko */
+  color: #c33575; /* Korostettu väri */
+  margin-bottom: 20px; /* Väli otsikon ja tekstin välillä */
 }
 
 .tervetuloteksti h2 {
@@ -138,43 +137,40 @@ nav a:hover {
 
 .tervetuloteksti p {
   font-size: 1rem; /* Tekstin koko */
-  line-height: 1.5; /* Riviväli */
-  color: #333333; /* Tumma fontin väri */
-  margin-top: 0; /* Poistaa ylimääräisen marginaalin ylhäältä */
+  line-height: 1.6; /* Lisää riviväliä */
+  color: #333; /* Tumma fontin väri */
+  margin-bottom: 20px; /* Väli tekstin ja painikkeen välillä */
 }
 
-.cta-button {
+.tervetuloteksti .cta-button {
   display: inline-block;
   background-color: #c33575; /* Painikkeen taustaväri */
-  color: #ffffff; /* Tekstin väri */
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
+  color: #fff; /* Tekstin väri */
+  padding: 10px 20px; /* Lisää tilaa painikkeen sisälle */
+  border-radius: 5px; /* Pyöristetyt kulmat */
+  text-decoration: none; /* Poistaa alleviivauksen */
   font-weight: bold;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Lisää animaatio varjolle */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Lisää varjo painikkeeseen */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Hover-animaatio */
 }
 
-.cta-button:hover {
-  background-color: #c33575; /* Hover-efekti */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Syvempi varjo hover-tilassa */
+.tervetuloteksti .cta-button:hover {
+  background-color: #a0295a; /* Tummempi hover-väri */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Syvempi varjo hover-tilassa */
 }
 
 .corner-image {
-  position: relative; /* Kiinnitetään suhteessa tekstilaatikkoon */
-  margin: 20px auto; /* Keskitetään kuva */
+  margin: 20px auto; /* Keskittää kuvan */
   display: flex;
   justify-content: center;
 }
-
 
 .corner-image img {
   width: 100px;
   height: 100px;
   border-radius: 50%; /* Pyöreä muoto */
-  border: 3px solid #c33575; /* Lisää pinkki reunus *
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Lisää varjo kuvan ympärille */
-  object-fit: cover; /* Varmistaa, että kuva täyttää ympyrän */
+  border: 3px solid #c33575; /* Korostettu reunus */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Varjo kuvan ympärille */
+  object-fit: cover; /* Varmistaa, että kuva ei veny */
 }
 
 /* Footer pysyy alareunassa ja näkyy oikein */
@@ -474,6 +470,27 @@ footer {
 
 /* Responsiiviset tyylit */
 
+/* Keskikokoiset näytöt (768px - 1199px) */
+@media (max-width: 1199px) {
+  .logo img {
+    width: 120px; /* Pienennetään logoa keskikokoisilla näytöillä */
+  }
+}
+
+/* Pienet näytöt (481px - 767px) */
+@media (max-width: 767px) {
+  .logo img {
+    width: 100px; /* Pienennetään logoa tableteilla */
+  }
+}
+
+/* Erittäin pienet näytöt (alle 480px) */
+@media (max-width: 480px) {
+  .logo img {
+    width: 80px; /* Pienennetään logoa puhelimilla */
+  }
+}
+
 /* Piilotetaan navigointilinkit mobiilissa */
 @media (max-width: 768px) {
 
@@ -513,28 +530,25 @@ footer {
 
   /* Tekstilaatikko mukautuu */
   .tervetuloteksti {
-    margin: 120px auto 30px; /* Jätetään tilaa navigoinnille yläpuolelle */
-    padding: 15px;
-    max-width: 90%;
+    margin: 80px auto 20px; /* Pienennetään marginaaleja */
+    padding: 15px; /* Pienennetään sisäistä tilaa */
+    max-width: 90%; /* Laatikko täyttää enemmän tilaa */
   }
 
   .tervetuloteksti h1 {
-    font-size: 1rem; /* Pienempi fonttikoko tableteille ja pienille näytöille */
-    margin-bottom: 8px; /* Väli otsikon ja tekstin välillä */
+    font-size: 1.5rem; /* Pienennetään otsikon kokoa */
   }
 
   .tervetuloteksti p {
-    font-size: 0.9rem; /* Pienempi fonttikoko tableteille ja pienille näytöille */
-    line-height: 1.3; /* Lisää riviväliä */
+    font-size: 1.2rem; /* Pienennetään tekstin kokoa */
+    line-height: 1.4; /* Pienennetään riviväliä */
   }
 
-  /* Pallokuva siirtyy tekstilaatikon alapuolelle */
-  .corner-image {
-    position: static; /* Poistetaan kiinteä sijainti */
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
+  .corner-image img {
+    width: 80px; /* Pienennetään kuvan kokoa */
+    height: 80px;
   }
+}
 
   footer {
     font-size: 0.9rem; /* Pienempi fonttikoko tableteille */
@@ -554,10 +568,10 @@ footer {
   }
 
   .about-text p {
-    font-size: 0.9rem; /* Pienennetään tekstin kokoa */
+    font-size: 1.2rem; /* Pienennetään tekstin kokoa */
     line-height: 1.4; /* Pienennetään riviväliä */
   }
-}
+
   
 
 @media (max-width: 480px) {
@@ -567,8 +581,6 @@ footer {
     height: 20px;
     margin: 10px; /* Lisää tilaa hampurilaisvalikon ympärille */
   }
-
-
 
   nav {
     padding: 10px;
@@ -590,32 +602,34 @@ footer {
   }
 
   .tervetuloteksti {
-    margin: 120px auto 30px; /* Jätetään tilaa navigoinnille yläpuolelle */
-    padding: 15px;
-    max-width: 90%;
+    margin: 60px auto 10px;
+    padding: 10px;
+    max-width: 95%;
+  }
+
+  .tervetuloteksti h1 {
+    font-size: 1.2rem;
   }
 
   .tervetuloteksti h2 {
-    font-size: 0.8rem; /* Pienempi fonttikoko puhelimille */
+    font-size: 1.5rem; /* Pienempi fonttikoko puhelimille */
     margin-top: 10px;
   }
 
   .tervetuloteksti p {
-    font-size: 0.8rem; /* Pienennetään tekstin kokoa mobiililaitteilla */
-    line-height: 1.2; /* Pienennetään riviväliä */
+    font-size: 1.5rem;
+    line-height: 1.3;
   }
   
   .corner-image {
     position: static; /* Kiinnitetään kuva suhteessa näkymään */
-   
+  
     right: 2px; /* Sijoitetaan kuva oikeaan reunaan */
    
   }
   .corner-image img {
     width: 60px;
     height: 60px;
-    bottom: 100px; /* Sijoitetaan kuva lähemmäksi footeria */
-    margin-bottom: 10px; /* Lisää vielä enemmän tilaa mobiililaitteilla */
   }
 
   footer {
@@ -627,7 +641,7 @@ footer {
   }
 
   .about-text p {
-    font-size: 0.8rem; /* Pienennetään tekstin kokoa puhelimille */
+    font-size: 1.2rem; /* Pienennetään tekstin kokoa puhelimille */
     line-height: 1.3; /* Pienennetään riviväliä */
   }
 }
@@ -640,33 +654,6 @@ footer {
   }
 }
 
-
-/* Keskikokoiset näytöt (768px - 1199px) */
-@media (max-width: 1199px) and (min-width: 768px) {
-  .container {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-
-  .tervetuloteksti {
-    margin: 120px auto 40px;
-    padding: 15px;
-    max-width: 80%;
-  }
-
-  .tervetuloteksti h1 {
-    font-size: 2rem;
-  }
-
-  .corner-image img {
-    width: 100px;
-    height: 100px;
-  }
-
-  .nav-links {
-    gap: 15px;
-  }
-}
 
 /* Pienet näytöt (481px - 767px) */
 @media (max-width: 767px) and (min-width: 481px) {
@@ -686,7 +673,7 @@ footer {
   }
 
   .tervetuloteksti p {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     line-height: 1.4;
   }
 
@@ -718,11 +705,11 @@ footer {
   }
 
   .tervetuloteksti h1 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   .tervetuloteksti p {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     line-height: 1.2;
   }
 
@@ -743,15 +730,10 @@ footer {
 
 /* Responsiiviset tyylit hinnastolle */
 @media (max-width: 768px) {
-  .price-table {
-    display: block; /* Muutetaan taulukko lohkotason elementiksi */
-    overflow-x: auto; /* Lisätään vaakasuuntainen vieritys */
-    white-space: nowrap; /* Estetään rivinvaihdot */
-  }
-
-  .price-table th, .price-table td {
-    font-size: 0.9rem; /* Pienennetään fonttikokoa */
-    padding: 8px; /* Pienennetään solujen sisäistä tilaa */
+  #hinnasto {
+    margin: 100px auto 20px; /* Lisätään marginaalia yläreunaan */
+    padding: 15px; /* Pienennetään sisäistä tilaa */
+    max-width: 90%; /* Laatikko täyttää enemmän tilaa */
   }
 
   #hinnasto h1 {
@@ -759,14 +741,16 @@ footer {
   }
 
   #hinnasto p {
-    font-size: 0.5rem; /* Pienennetään tekstin kokoa */
+    font-size: 0.9rem; /* Pienennetään tekstin kokoa */
+    line-height: 1.4; /* Lisää riviväliä */
   }
 }
 
 @media (max-width: 480px) {
-  .price-table th, .price-table td {
-    font-size: 0.8rem; /* Pienennetään fonttikokoa entisestään */
-    padding: 5px; /* Pienennetään solujen sisäistä tilaa */
+  #hinnasto {
+    margin: 120px auto 10px; /* Lisätään enemmän marginaalia yläreunaan */
+    padding: 10px; /* Pienennetään sisäistä tilaa */
+    max-width: 95%; /* Laatikko täyttää lähes koko näytön leveyden */
   }
 
   #hinnasto h1 {
@@ -774,7 +758,8 @@ footer {
   }
 
   #hinnasto p {
-    font-size: 0.5rem; /* Pienennetään tekstin kokoa puhelimille */
+    font-size: 0.8rem; /* Pienennetään tekstin kokoa puhelimille */
+    line-height: 1.3; /* Pienennetään riviväliä */
   }
 }
 

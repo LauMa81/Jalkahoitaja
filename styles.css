@@ -357,6 +357,23 @@ footer {
   margin-bottom: 10px;
 }
 
+.cta-button {
+  display: inline-block; /* Muuttaa linkin lohkotason elementiksi */
+  background-color: #c33575; /* Painikkeen taustaväri */
+  color: #fff; /* Tekstin väri */
+  padding: 10px 20px; /* Lisää sisäistä tilaa */
+  border-radius: 5px; /* Pyöristetyt kulmat */
+  text-decoration: none; /* Poistaa alleviivauksen */
+  font-weight: bold; /* Tekstin lihavointi */
+  text-align: center; /* Keskittää tekstin */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Hover-animaatio */
+}
+
+.cta-button:hover {
+  background-color: #a0295a; /* Tummempi hover-väri */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Lisää varjo hover-tilassa */
+}
+
 /* Flexbox-asettelu listauksille */
 .lists-container {
   display: flex;
